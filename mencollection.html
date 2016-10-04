@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="style.css"  rel="stylesheet"/>
+    
+    <link href="style1.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colors/default.css" id="option_color">
+    <!-- PLUGINS CSS STYLE -->
+    
+    <link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="plugins/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="plugins/owl-carousel/owl.carousel.css" media="screen">
+    <link rel="stylesheet" href="options/optionswitch.css">
+     
+</head>
+<body class="container" style="padding-right:30px" >
+    
+
+ 
+
+
+
+
+        <nav class="navbar1 navbar-inverse navbar-fixed-top " style="line-height:48px">
+            <div class="container-fluid" >
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a style="color:#47bac1" href="marketing.html">Logo</a></li>
+                        <li class="dropdown">
+                            <a style="color:#47bac1" href="#" class="dropdown-toggle" data-toggle="dropdown">Shop By Category<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a style="color:#47bac1" href="mencollection.html">Men</a></li>
+                                <li><a style="color:#47bac1" href="womencollection.html">Women</a></li>
+                                <li><a style="color:#47bac1" href="kidscollection.html">Kids</a></li>
+
+                            </ul>
+                        </li>
+                        <li> <form class="navbar-form  navbar-right" role="search">
+                        <div class="input-group " style="margin-left:50px">
+                            <input type="text" class="form-control form-right" style="width: 200px; margin-left: 550px, border: 1px solid black; background-color:white;" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button type="reset" class="btn">
+                                    <span class="glyphicon glyphicon-remove">
+                                        <span class="sr-only">Close</span>
+                                    </span>
+                                </button>
+                                <button type="submit" class="btn">
+                                    <span class="glyphicon glyphicon-search">
+                                        <span class="sr-only">Search</span>
+                                    </span>
+                                </button>
+                            </span>
+                        </div>
+                    </form> 
+                   </li>
+                    </ul>
+                          
+
+                
+            <ul class="nav navbar-nav navbar-right" >
+               
+              <li class="active"><a style="color:#47bac1" href="deals.html">Deals</a></li>
+            
+                
+                  <li><span><a style="color:#47bac1" data-toggle="modal" href='.login-modal'>Log in</a><small>or</small><a style="color:#47bac1" data-toggle="modal" href='#signup'>Create an account</a></span></li>
+               
+            <li><a style="color:#47bac1" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+          </ul>
+
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>-->
+    <script>
+         $(function () {
+        // Remove Search if user Resets Form or hits Escape!
+		$('body, .navbar-collapse form[role="search"] button[type="reset"]').on('click keyup', function(event) {
+			console.log(event.currentTarget);
+			if (event.which == 27 && $('.navbar-collapse form[role="search"]').hasClass('active') ||
+				$(event.currentTarget).attr('type') == 'reset') {
+				closeSearch();
+			}
+		});
+
+		function closeSearch() {
+            var $form = $('.navbar-collapse form[role="search"].active')
+    		$form.find('input').val('');
+			$form.removeClass('active');
+		}
+
+		// Show Search if form is not active // event.preventDefault() is important, this prevents the form from submitting
+		$(document).on('click', '.navbar-collapse form[role="search"]:not(.active) button[type="submit"]', function(event) {
+			event.preventDefault();
+			var $form = $(this).closest('form'),
+				$input = $form.find('input');
+			$form.addClass('active');
+			$input.focus();
+
+		});
+		// ONLY FOR DEMO // Please use $('form').submit(function(event)) to track from submission
+		// if your form is ajax remember to call `closeSearch()` to close the search container
+		$(document).on('click', '.navbar-collapse form[role="search"].active button[type="submit"]', function(event) {
+			event.preventDefault();
+			var $form = $(this).closest('form'),
+				$input = $form.find('input');
+			$('#showSearchTerm').text($input.val());
+            closeSearch()
+		});
+    });
+    $(".navbar").affix({offset: {top: $("header").outerHeight(true)} });
+    </script>
+
+
+    <div style="padding-right:0px">
+
+      <!-- MAIN CONTENT SECTION -->
+      <section class="mainContent clearfix">
+        <div class="container" style="padding-right:80px">
+          <div class="row featuredCollection">
+            <div class="col-xs-12">
+              <div class="page-header">
+                <h4 style="color:#47bac1">Men's Collection</h4>
+              </div>
+            </div>
+              <ol class="breadcrumb" style="color:#47bac1">
+<li><a href="marketing.html" style="color:#47bac1">Home</a></li> 
+    <li clas="active"><a href="#" style="color:#47bac1">Men</a></li> 
+   
+</ol>
+    
+            <div class="col-sm-4 col-xs-12">
+              <div class="thumbnail" onclick="mencollection.html">
+                <div class="imageWrapper">
+                  <img src="b.jpg" alt="feature-collection-image">
+                  <div class="masking"><a href="mencollection.html" class="btn viewBtn">View Products</a></div>
+                </div>
+                <div class="caption">
+                  <h4>CANVAS</h4>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <div class="thumbnail" onclick="location.href='single-product.html';">
+                <div class="imageWrapper">
+                  <img src="b.jpg" alt="feature-collection-image">
+                  <div class="masking"><a href="product-grid-left-sidebar.html" class="btn viewBtn">View Products</a></div>
+                </div>
+                <div class="caption">
+                  <h4>BOOTS</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <div class="thumbnail" onclick="location.href='single-product.html';">
+                <div class="imageWrapper">
+                  <img src="b.jpg" alt="feature-collection-image">
+                  <div class="masking"><a href="product-grid-left-sidebar.html" class="btn viewBtn">View Products</a></div>
+                </div>
+                <div class="caption">
+                  <h4>SANDALS</h4>
+                </div>
+              </div>
+            </div>
+               <div class="col-sm-4 col-xs-12">
+              <div class="thumbnail" onclick="mencollection.html">
+                <div class="imageWrapper">
+                  <img src="b.jpg" alt="feature-collection-image">
+                  <div class="masking"><a href="mencollection.html" class="btn viewBtn">View Products</a></div>
+                </div>
+                <div class="caption">
+                  <h4>sandals</h4>
+                  </div>
+              </div>
+            </div>
+               <div class="col-sm-4 col-xs-12">
+              <div class="thumbnail" onclick="mencollection.html">
+                <div class="imageWrapper">
+                  <img src="b.jpg" alt="feature-collection-image">
+                  <div class="masking"><a href="mencollection.html" class="btn viewBtn">View Products</a></div>
+                </div>
+                <div class="caption">
+                  <h4>Shoes</h4>
+                  </div>
+              </div>
+            </div>
+               <div class="col-sm-4 col-xs-12">
+              <div class="thumbnail" onclick="mencollection.html">
+                <div class="imageWrapper">
+                  <img src="b.jpg" alt="feature-collection-image">
+                  <div class="masking"><a href="mencollection.html" class="btn viewBtn">View Products</a></div>
+                </div>
+                <div class="caption">
+                  <h4>Boots</h4>
+                  </div>
+              </div>
+            </div>
+          </div>
+         
+          
+      </section>
+
+          </div>
+     <nav class="navbar2 navbar-inverse ">
+		<div class="container-fluid text-center txt">
+            <a href="marketing.html" class="last">Back to Top</a>
+         </div>
+    </nav>
+
+   
+    <footer class="container-fluid text-center" style="background-color:black">
+    
+    <div class="row">
+
+    <div class="col-sm-3 col-xs-3">
+      
+        <h3 style="color:white">Site Navigation</h3>
+        <ul style="list-style-type:none">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Shipping Details</a></li>
+        <li><a href="#">My Cart</a></li>
+      </ul>
+<br><br>
+      </div>
+   
+
+
+    <div class="col-sm-3 col-xs-3">
+      <h3 style="color:white">About Company</h3>
+      <ul style="list-style-type:none">
+      <li><a href="#">Careers</a></li>
+        <li><a href="#">Coperate</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Affiliate Program</a></li>
+
+      </ul>
+      
+    </div>
+
+  
+
+  
+  <div class="col-sm-3 col-xs-3">
+        <h3 style="color:white">Customer Support</h3>
+        <ul style="list-style-type:none">
+<li><a href="#">Track my order</a></li>
+        <li><a href="#">Shopping policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">More Support</a></li>
+        </ul>
+</div>
+    
+        
+        <div class ="col-sm-3 col-xs-3" >
+           <h3 style="color:white">Connect with us</h3>
+          <h5  style="color:white">Newsletter</h5>
+    
+                <form class="form" role="form">
+                  Email address<br>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" size="5" ></br>
+                  <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                </form>
+
+      </div>
+    </div>
+  
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <div class="modal fade login-modal" id="login" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">log in</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="email" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember Me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">log in</button>
+              <button type="button" class="btn btn-link btn-block">Forgot Password?</button>
+            </form>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN UP MODAL -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">Create an account</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="email" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+            </form>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORDUCT QUICK VIEW MODAL -->
+    <div class="modal fade quick-view" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="img/products/quick-view/quick-view-01.jpg" alt="Image">
+              </div>
+              <div class="media-body">
+                <h2>Old Skool Navy</h2>
+                <h3>$149</h3>
+                <p>Classic sneaker from Vans. Cotton canvas and suede upper. Textile lining with heel stabilizer and ankle support. Contrasting laces. Sits on a classic waffle rubber sole.</p>
+                <span class="quick-drop">
+                  <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                    <option value="0">Size</option>
+                    <option value="1">Size 1</option>
+                    <option value="2">Size 2</option>
+                    <option value="3">Size 3</option>            
+                  </select>
+                </span>
+                <span class="quick-drop resizeWidth">
+                  <select name="guiest_id4" id="guiest_id4" class="select-drop">
+                    <option value="0">Qty</option>
+                    <option value="1">Qty 1</option>
+                    <option value="2">Qty 2</option>
+                    <option value="3">Qty 3</option>            
+                  </select>
+                </span>
+                <div class="btn-area">
+                  <a href="#" class="btn btn-primary btn-block">Add to cart <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+    <script src="plugins/countdown/jquery.syotimer.js"></script>
+    <script src="options/optionswitcher.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+ 

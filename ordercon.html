@@ -1,0 +1,689 @@
+<head>
+  <title>Order Confirmation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="font-awesome-4.6.3/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="jquery.creditCardValidator.js"></script>
+
+<script>
+function typepromo(){
+$('#promoerror').hide();
+}
+</script>
+<script>
+function check(item) {	
+     if( !$(item).val()) {
+
+         $('#'+($(item).attr('id')+'error')).show(); 
+}
+}
+</script>
+<script>
+var hidemsg = function(item) {
+            $('#'+($(item).attr('id')+'error')).hide(); 
+}
+</script>
+<script>
+var remele = function(item) {
+	var id=$(item).attr('id');
+	var l=id.length;
+	var id1=id.substring(0,l-6);
+           $('#'+id1).remove();
+}
+</script>
+<script>
+function promoclick() {	
+
+if(!$('#promo').val())  $('#promoerror').show();
+else $('#promoappl').show();
+}
+</script>
+<script>
+function atmclick() {	
+if(document.getElementById("selecthead").selected == true) $('#banknameerror').show()
+     if(!$('#ad1').val()) $('#ad1error').show();
+	if(!$('#ad2').val()) $('#ad2error').show();
+if(!$('#ad3').val()) $('#ad3error').show();
+if(!$('#ad4').val()) $('#ad4error').show();
+if(!$('#cname3').val()) $('#cname3error').show();
+if(!$('#cno3').val()) $('#cno3error').show();
+if(!$('#pin').val()) $('#pinerror').show();
+	else window.location.href = "thank.html";
+}
+</script>
+<script>
+function debitclick() {	
+     if(!$('#ad1').val()) $('#ad1error').show();
+	if(!$('#ad2').val()) $('#ad2error').show();
+if(!$('#ad3').val()) $('#ad3error').show();
+if(!$('#ad4').val()) $('#ad4error').show();
+if(!$('#cname2').val()) $('#cname2error').show();
+if(!$('#cno2').val()) $('#cno2error').show();
+	else window.location.href = "thank.html";
+}
+</script>
+<script>
+function creditclick(item) {	
+    if(!$('#ad1').val()) $('#ad1error').show();
+	if(!$('#ad2').val()) $('#ad2error').show();
+if(!$('#ad3').val()) $('#ad3error').show();
+if(!$('#ad4').val()) $('#ad4error').show();
+if(!$('#cname1').val()) $('#cname1error').show();
+if(!$('#cno1').val()) $('#cno1error').show();
+	else window.location.href = "thank.html";
+}
+</script>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="style.css"  rel="stylesheet"/>
+    <link href="style2.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colors/default.css" id="option_color">
+    <!-- PLUGINS CSS STYLE -->
+    
+    <link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="plugins/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="plugins/owl-carousel/owl.carousel.css" media="screen">
+    <link rel="stylesheet" href="options/optionswitch.css">
+</head>
+<body  style="background-color:white" data-spy="scroll" data-target=".navbar" data-offset="50">
+    
+<div style="background-color:white">
+
+
+ <nav class="navbar1 navbar-default navbar-fixed-top"  style="line-height:40px">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <ul class="nav navbar-nav" >
+                      <li class="active" style="color:#47bac1"><span class="glyphicon glyphicon-home"><a href="first.html" style="color:#47bac1"></a></span></li>
+                        <li  class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#47bac1">SHOP<b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="color:#47bac1;">
+                                <li><a style="color:#47bac1" href="men.html">FOR HIM</a></li>
+                                <li><a style="color:#47bac1" href="women.html">FOR HER</a></li>
+                                <li><a style="color:#47bac1" href="kids.html">KIDS</a></li>
+
+                            </ul>
+                        </li>
+                                     <li><a style="color:#47bac1" href="deals.html">Deals</a></li>
+                        <li> <form class="navbar-form" role="search">
+                        <div class="input-group " style="margin-left:50px">
+                            <input type="text" class="form-control form-right" style="width: 200px; margin-left: 550px, border: 1px solid black; background-color:white;" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button type="reset" class="btn">
+                                    <span class="glyphicon glyphicon-remove">
+                                        <span style="color:#47bac1" class="sr-only">Close</span>
+                                    </span>
+                                </button>
+                                <button type="submit" class="btn">
+                                    <span class="glyphicon glyphicon-search">
+                                        <span class="sr-only">Search</span>
+                                    </span>
+                                </button>
+                            </span>
+                        </div>
+                    </form> 
+                   </li>
+                    </ul>
+                          
+            <ul class="nav navbar-nav navbar-right">
+                                       
+
+                <ul class="list-inline pull-right">
+               <li><span><a style="color:#47bac1" data-toggle="modal" href='.login-modal'>Log in</a><small>  or  </small><a style="color:#47bac1" data-toggle="modal" href='#signup'>Create an account</a></span></li>  
+                </ul>
+            <li><a style="color:#47bac1" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+          </ul>
+
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+    
+
+      <!-- MAIN CONTENT SECTION -->
+            <section class="mainContent clearfix full-width">
+                    <div class="row row-same-height">
+
+    <div class="col-sm-6 col-xs-6">
+        <div  style="padding-right:60px;margin-top:2%">
+<div class="clearfix float-my-children">
+	<div id="shipping" style="Margin-left:80px">
+		<div class="panel panel-primary" style="width:400px">
+			<div class="panel-heading" style="background-color:black">Shipping Address</div>
+			<div class="panel-body">
+				<div>
+					<input type="text" id="ad1" class="form-control" placeholder="Address Line 1" style="width:360px" onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="ad1error" style="color:red" hidden="true">This field cannot be empty</p></br>
+					<input type="text" id="ad2" class="form-control" placeholder="Address Line 1" style="width:360px" onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="ad2error" style="color:red" hidden="true">This field cannot be empty</p></br>
+					<input type="text" id="ad3" class="form-control" placeholder="Address Line 2" style="width:360px" onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="ad3error" style="color:red" hidden="true">This field cannot be empty</p></br>
+					<input type="text" id="ad4" class="form-control" placeholder="Address Line 1" style="width:360px" onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="ad4error" style="color:red" hidden="true">This field cannot be empty</p></br>
+				</div>
+
+			</div>
+		</div>   </br></br>
+		<div class="panel panel-primary" style="width:400px">
+			<div class="panel-heading" style="background-color:black">Payment Details</div>
+			<div class="panel-body">
+				<div id="paymentinfo">
+					<input type="text"  id="promo" class="form-control" placeholder="Promo Code" style="width:350px" onclick='typepromo()'>
+					<div style="font-color:black"><a href="">What is this?</a></div>
+					<button type="button" onclick="promoclick()" class="form-control" style="width:80px;background-color:grey;color:white;margin-left:250px">APPLY</button>
+					<p id="promoerror" hidden="true" style="color:red">Please enter a promocode</p>
+					<p id="promoappl" hidden="true">Promo code is applied!</p>
+					<hr/></br>
+					<div id="cards">
+						<button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#creditcard" style="width:350px" data-parent="#cards" >
+							<span class="sr-only">Toggle
+							creditcard</span>
+								<i class="fa fa-creditcard">
+								CREDIT CARD
+								</i>
+						</button></br>
+						<div class="clearfix collapse" id="creditcard"style="height:auto">
+							<input type="text"  id="cname1" class="form-control" placeholder="Card Holder's Name" style="width:350px"onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="cname1error" style="color:red" hidden="true">This field cannot be empty</p></br>
+							<input type="text"  id="cno1" class="form-control" placeholder="Card Number" style="width:350px"onblur='check(this)' value="" onclick='hidemsg(this)' >
+							
+					<p id="cno1error" style="color:red" hidden="true">This field cannot be empty</p></br>
+					
+							<div class="clearfix float-my-children">
+								<input type="text" id="m1" class="form-control" placeholder="Expiry Month" style="width:171px" >&nbsp
+								<input type="text"  id="y1"class="form-control" placeholder="Expiry Year" style="width:171px"  >
+							</div></br>
+							<input type="password"  id="cvv1" class="form-control" placeholder="CVV" style="width:350px"  ></br>
+							<a href="">Where is this on my card?</a>
+							<div style="margin-left:230px"> 
+							<a><button type="submit" onclick='creditclick()' class="form-control" style="width:96px;background-color:grey;color:white;" >CONTINUE</button></a></br> 
+							</div>
+						</div>
+						<button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#debitcard" style="width:350px" data-parent="#cards" style="background-color:black">
+							<span class="sr-only">Toggle
+							debitcard</span>
+								<i class="fa fa-debitcard">
+								DEBIT CARD
+								</i>
+						</button></br>
+						<div class="clearfix collapse" id="debitcard"style="height:auto">
+							<input type="text"  id="cname2" class="form-control" placeholder="Card Holder's Name" style="width:350px"onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="cname2error" style="color:red" hidden="true">This field cannot be empty</p></br>
+							
+							<input type="text" id="cno2" class="form-control" placeholder="Card Number" style="width:350px" onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="cno2error" style="color:red" hidden="true">This field cannot be empty</p></br>
+					
+							<div class="clearfix float-my-children">
+								<input type="text" id="m2" class="form-control" placeholder="Expiry Month" style="width:171px" >&nbsp
+								<input type="text"  id="y2"class="form-control" placeholder="Expiry Year" style="width:171px" >
+							</div></br>
+							<input type="password"  id="cvv2" class="form-control" placeholder="CVV" style="width:350px"></br>
+							<a href="">Where is this on my card?</a>
+							<div style="margin-left:230px"> 
+							<a><button type="submit"  onclick='debitclick()' class="form-control" style="width:96px;background-color:grey;color:white;" >CONTINUE</button></a></br> 
+							</div>
+						</div>
+						<button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#atmcard" style="width:350px" data-parent="#cards">
+							<span class="sr-only">Toggle
+							atmcard</span>
+								<i class="fa fa-atmcard">
+								 ATM CARD
+								</i>
+						</button></br></br>
+						<div class="clearfix collapse" id="atmcard"style="height:auto">
+							<select style="width:300px" class="form-control" id="bankname">
+							  <option value="YourBank" id="selecthead">Select Your Bank</option>
+							  <option value="Bank1">Bank 1</option>
+							  <option value="Bank2">Bank 2</option>
+							  <option value="Bank3">Bank 3</option>
+							</select>
+						<p id="banknameerror" style="color:red" hidden="true">Please Select Your Bank</p></br>
+							<input type="text"  id="cname3" class="form-control" placeholder="Card Holder's Name" style="width:350px"onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="cname3error" style="color:red" hidden="true">This field cannot be empty</p></br>
+							
+							<input type="text" id="cno3" class="form-control" placeholder="Card Number" style="width:350px" onblur='check(this)' value="" onclick='hidemsg(this)' >
+					<p id="cno3error" style="color:red" hidden="true">This field cannot be empty</p></br>
+					
+							<div class="clearfix float-my-children">
+								<input type="text" id="m3" class="form-control" placeholder="Expiry Month" style="width:171px" >&nbsp
+								<input type="text"  id="y3"class="form-control" placeholder="Expiry Year" style="width:171px"  ></br>
+							</div></br>
+							<input type="password"  id="pin" class="form-control" placeholder="PIN" style="width:350px" onblur='check(this)' value="" onclick='hidemsg(this)' >
+							<p id="pinerror" style="color:red" hidden="true">This field cannot be empty</p></br>
+							<input type="password"  id="cvv3" class="form-control" placeholder="CVV" style="width:350px" >
+							<a href="">Where is this on my card?</a>
+
+							<div style="margin-left:230px"> 
+							<a><button type="submit"  onclick='atmclick()' class="form-control" style="width:96px;background-color:grey;color:white;" >CONTINUE</button></a></br> 
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>   
+	</div>
+</div>
+</div>
+<div id="orders" style="margin-left:80px">
+		<div href="http://www.credit-card-logos.com"><img alt="<br />
+		<b>Notice</b>:  Undefined variable: alt_tag in <b>/home/ccl606/public_html/first.html</b> on line <b>59</b><br />
+		" title="<br />
+		<b>Notice</b>:  Undefined variable: alt_tag in <b>/home/ccl606/public_html/first.html</b> on line <b>59</b><br />
+		" src="http://www.credit-card-logos.com/images/multiple_credit-card-logos-1/credit_card_logos_10.gif" width="350" 			height="50" border="0" /></div></br></br></br>
+
+</div>
+</div>
+
+    <div class="col-sm-6 col-xs-6">
+	
+<div id="orders" style=" margin-top:2%">
+		<div class="panel panel-primary" style="width:400px;padding-bottom:7px">
+			<div class="panel-heading" style="background-color:black">Order Summary</div>
+			<div class="panel-body">
+				<div class="clearfix float-my-children" id="order1">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6">
+                            <img src="women/1.4.jpeg" style="width:100px"></div>
+					<div class="col-sm-6 col-xs-6">
+						<a href=""><div style="font-size:17px;line-break:auto;color:black">Girls' Synthetic Casual Shoes</div></a>
+						<div class="clearfix float-my-children"><div style="font-size:13px">UPC:</div><div style="font-size:13px">12468564358765836</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">QTY:</div><div style="font-size:13px">1</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">Item Price:</div><div style="font-size:13px">$</div><div style="font-size:13px" value="55.9">55.9</div></div>
+						<a id="order1remove" onclick='remele(this)'>Remove</a>
+					</div>
+				</div></br>
+				<div class="clearfix float-my-children" id="order2">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6">
+                            <img src="men/1.7.jpeg" style="width:100px"></div>
+					<div class="col-sm-6 col-xs-6">
+						<a href=""><div style="font-size:17px;line-break:auto;color:black">Unisex Canvas Sneakers</div></a>
+						<div class="clearfix float-my-children"><div style="font-size:13px">UPC:</div><div style="font-size:13px">12468564358765836</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">QTY:</div><div style="font-size:13px">1</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">Item Price:</div><div style="font-size:13px" >$</div><div style="font-size:13px" value="19.9">19.9</div></div>
+						<a id="order2remove" onclick='remele(this)'>Remove</a>
+
+					</div>
+				</div></br>
+				<div class="clearfix float-my-children" id="order3">
+                                        <div class="row">
+                        <div class="col-sm-6 col-xs-6">
+                            <img src="men/4.2.jpeg" style="width:100px"></div>
+					<div class="col-sm-6 col-xs-6">
+						<a href=""><div style="font-size:17px;line-break:auto;color:black">Wedges Black Cross Sandal</div></a>
+						<div class="clearfix float-my-children"><div style="font-size:13px">UPC:</div><div style="font-size:13px">12468564358765836</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">QTY:</div><div style="font-size:13px">1</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">Item Price:</div><div style="font-size:13px">$</div><div style="font-size:13px" value="30.9">30.9</div></div>
+						<a id="order3remove" onclick='remele(this)'>Remove</a>
+					</div>
+				</div></br>
+				<div class="clearfix float-my-children" id="order4">
+                                        <div class="row">
+
+                        <div class="col-sm-6 col-xs-6">
+                            <img src="women/5.3.jpeg" style="width:100px"></div>
+                        <div class="col-sm-6 col-xs-6">
+
+						<a href=""><div style="font-size:17px;line-break:auto;color:black">Flower Flats Sandals</div></a>
+						<div class="clearfix float-my-children"><div style="font-size:13px">UPC:</div><div style="font-size:13px">12468564358765836</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">QTY:</div><div style="font-size:13px">1</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:13px">Item Price:</div><div style="font-size:13px">$</div><div style="font-size:13px" value="40.9">40.9</div></div>
+						<a id="order4remove" onclick='remele(this)'>Remove</a>
+					</div>
+				</div><hr/>
+				<div class="clearfix float-my-children">
+                    <div class="row">
+                      <div class="col-sm-6 col-xs-6">
+					<div id="Billpara" style="margin-left:100px">
+						<div style="font-size:17px">Subtotal:</div>
+						<div style="font-size:17px">Discount:</div>
+						<div style="font-size:17px">Shipping:</div>
+						<div style="font-size:17px">Salestax:</div>
+					</div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+					<div id="Amount" style="text-align:right;float:right">
+						<div class="clearfix float-my-children" id="subtotal"><div style="font-size:17px" >$229.97</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:17px">$10</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:17px">$30</div></div>
+						<div class="clearfix float-my-children"><div style="font-size:17px">$1.56</div></div>
+					</div>
+                        </div>
+                    </div></div><hr/>
+				<div class="row">
+                    <div class="col-sm-6 col-xs-6">
+                        <div style="margin-left:100px;font-size:17px"><div style="font-size:19px">Order Total:</div></div></div>
+                                        <div class="col-sm-6 col-xs-6">
+                                            <div style="text-align:right;float:right;font-size:17px"><div style="font-size:20px">$333.47</div></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+         
+          
+      </section>
+
+    
+    
+       
+    
+
+    
+    
+     
+    <nav class="navbar2 navbar-default ">
+		<div class="container-fluid text-center txt">
+            <a style="color:#47bac1" href="#" class="last">Back to Top</a>
+         </div>
+    </nav>
+    
+    
+
+
+
+
+
+
+
+
+
+
+    <footer class="container-fluid text-center " style="background-color:black">
+    
+    <div class="row">
+
+    <div class="col-sm-4 col-xs-4">
+      
+       <div>
+
+                        <h4 style="color:#47bac1">Stay in touch</h4>
+
+                        <p class="social">
+                            <a href="https://www.facebook.com/The-Shoe-Cart-685188684987709/?skip_nax_wizard=true&__mref=message_bubble" class="facebook external"><i class="fa fa-facebook"></i></a>
+                            <a href="#" style="animation-name:shake" data-animate-hover="shake" class="twitter external"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="instagram external"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="gplus external"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="email external"><i class="fa fa-envelope"></i></a>
+                        </p>
+                      </div>
+
+
+      </div>
+   
+   
+
+
+    <div class="col-sm-4 col-xs-4">
+        <h3 style="color:#47bac1">Customer Support</h3>
+        <ul style="list-style-type:none">
+<li><a href="#">Track my order</a></li>
+        <li><a href="#">Shopping policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">More Support</a></li>
+        </ul>
+</div>
+
+  
+
+  
+          
+        
+    
+        
+        <div class ="col-sm-4 col-xs-4" >
+
+          <h5  style="color:white">Newsletter</h5>
+    
+                <form class="form" role="form">
+                  Email address<br>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" size="5" ></br>
+                                    <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>Subscription Successfull..!!</p>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+                </form>
+
+
+                            
+                            <!-- /input-group -->
+                       
+
+
+
+      </div>
+    </div>
+  <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" style="color:#47bac1">
+                    <p style="color:#47bac1">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<script>
+         $(function () {
+        // Remove Search if user Resets Form or hits Escape!
+		$('body, .navbar-collapse form[role="search"] button[type="reset"]').on('click keyup', function(event) {
+			console.log(event.currentTarget);
+			if (event.which == 27 && $('.navbar-collapse form[role="search"]').hasClass('active') ||
+				$(event.currentTarget).attr('type') == 'reset') {
+				closeSearch();
+			}
+		});
+
+		function closeSearch() {
+            var $form = $('.navbar-collapse form[role="search"].active')
+    		$form.find('input').val('');
+			$form.removeClass('active');
+		}
+
+		// Show Search if form is not active // event.preventDefault() is important, this prevents the form from submitting
+		$(document).on('click', '.navbar-collapse form[role="search"]:not(.active) button[type="submit"]', function(event) {
+			event.preventDefault();
+			var $form = $(this).closest('form'),
+				$input = $form.find('input');
+			$form.addClass('active');
+			$input.focus();
+
+		});
+		// ONLY FOR DEMO // Please use $('form').submit(function(event)) to track from submission
+		// if your form is ajax remember to call `closeSearch()` to close the search container
+		$(document).on('click', '.navbar-collapse form[role="search"].active button[type="submit"]', function(event) {
+			event.preventDefault();
+			var $form = $(this).closest('form'),
+				$input = $form.find('input');
+			$('#showSearchTerm').text($input.val());
+            closeSearch()
+		});
+    });
+    $(".navbar").affix({offset: {top: $("header").outerHeight(true)} });
+        
+        $(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+ 
+});
+    </script>
+    <div class="modal fade login-modal" id="login" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">log in</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="email" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember Me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">log in</button>
+              <button type="button" class="btn btn-link btn-block">Forgot Password?</button>
+            </form>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN UP MODAL -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">Create an account</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="email" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+            </form>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORDUCT QUICK VIEW MODAL -->
+    <div class="modal fade quick-view" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="img/products/quick-view/quick-view-01.jpg" alt="Image">
+              </div>
+              <div class="media-body">
+                <h2>Old Skool Navy</h2>
+                <h3>$149</h3>
+                <p>Classic sneaker from Vans. Cotton canvas and suede upper. Textile lining with heel stabilizer and ankle support. Contrasting laces. Sits on a classic waffle rubber sole.</p>
+                <span class="quick-drop">
+                  <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                    <option value="0">Size</option>
+                    <option value="1">Size 1</option>
+                    <option value="2">Size 2</option>
+                    <option value="3">Size 3</option>            
+                  </select>
+                </span>
+                <span class="quick-drop resizeWidth">
+                  <select name="guiest_id4" id="guiest_id4" class="select-drop">
+                    <option value="0">Qty</option>
+                    <option value="1">Qty 1</option>
+                    <option value="2">Qty 2</option>
+                    <option value="3">Qty 3</option>            
+                  </select>
+                </span>
+                <div class="btn-area">
+                  <a href="#" class="btn btn-primary btn-block">Add to cart <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+</body>
+</html>
+
+
+ 
